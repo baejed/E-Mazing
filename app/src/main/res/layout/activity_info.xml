@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DecryptActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <!--HEADER-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="20dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/shield_keyhole"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/title"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/space_mono_bold"
+                android:textColor="@color/green"
+                android:id="@+id/txtAppName"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/gradient_background_to_light">
+
+        </LinearLayout>
+
+        <!--BODY-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="10dp"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_background_to_light"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="15dp"
+                android:paddingTop="10dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/star"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/congrats_message"
+                    android:fontFamily="@font/space_mono_bold"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="References"
+                    android:layout_marginVertical="20dp"
+                    android:fontFamily="@font/space_mono_bold"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shadow_border"
+                    android:padding="30dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ref1"
+                            android:fontFamily="@font/space_mono_bold"
+                            android:textSize="14sp"
+                            android:textColor="@color/green"
+                            android:id="@+id/txtRef1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ref2"
+                            android:fontFamily="@font/space_mono_bold"
+                            android:textSize="14sp"
+                            android:textColor="@color/green"
+                            android:id="@+id/txtRef2"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ref3"
+                            android:fontFamily="@font/space_mono_bold"
+                            android:textSize="14sp"
+                            android:textColor="@color/green"
+                            android:id="@+id/txtRef3"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ref4"
+                            android:fontFamily="@font/space_mono_bold"
+                            android:textSize="14sp"
+                            android:textColor="@color/green"
+                            android:id="@+id/txtRef4"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Creators"
+                    android:layout_marginVertical="20dp"
+                    android:fontFamily="@font/space_mono_bold"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shadow_border"
+                    android:padding="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/creator1"
+                        android:fontFamily="@font/space_mono_bold"
+                        android:textSize="14sp"
+                        android:textColor="@color/green"
+                        android:id="@+id/txtCreator1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/creator2"
+                        android:fontFamily="@font/space_mono_bold"
+                        android:textSize="14sp"
+                        android:textColor="@color/green"
+                        android:id="@+id/txtCreator2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/creator3"
+                        android:fontFamily="@font/space_mono_bold"
+                        android:textSize="14sp"
+                        android:textColor="@color/green"
+                        android:id="@+id/txtCreator3"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:background="@color/black">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/home"
+                app:tint="@color/white"
+                android:id="@+id/navHome"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/lock"
+                app:tint="@color/white"
+                android:id="@id/navEncrypt"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/key"
+                app:tint="@color/white"
+                android:id="@+id/navDecrypt"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/shield_cross"
+                app:tint="@color/white"
+                android:id="@+id/navEncryptionList"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/info"
+                app:tint="@color/green"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

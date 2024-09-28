@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">E-Mazing</string>
+    <string name="title">E-Mazing Encryption</string>
+    <string name="encryption_desc">Encryption is the process of converting information or data into a code to prevent unauthorized access. It uses algorithms to transform readable data (plaintext) into an unreadable format (ciphertext). Only those with the correct decryption key can access the original information.</string>
+    <string name="placeholder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam officia accusantium nisi magni est repellendus facilis distinctio quia dicta corrupti.</string>
+    <string name="hash">eyJpdiI6IkYzYytHNVFielRQVUFSd1NOWTdlK1E9PSIsCiJ2IjoxLAoiaXRlciI6MTAwMCwKImtzIjoyNTYsCiJ0cyI6NjQsCiJtb2RlIjoiY2NtIiwKImFkYXRhIjoiIiwKImNpcGhlciI6ImFlcyIsCiJzYWx0IjoiWC9NMzdVN1Z3UGc9IiwKImN0IjoiRDJmT203b2diNzlDM2NFRCJ9</string>
+
+    <string name="aes_decription">The Advanced Encryption Standard (AES) is a symmetric encryption algorithm widely used across the globe to secure data. Established by the National Institute of Standards and Technology (NIST) in 2001, AES is a robust and efficient encryption standard that replaced the older Data Encryption Standard (DES).</string>
+
+    <string name="congrats_message">Congratulations on completing your encryption journey! You\'ve unlocked the secrets of encryption.</string>
+
+    <string name="sample_features">The Advanced Encryption Standard (AES) is a symmetric encryption algorithm widely used across the globe to secure data. Established by the National Institute of Standards and Technology (NIST) in 2001, AES is a robust and efficient encryption standard that replaced the older Data Encryption Standard (DES).
+
+Features:
+
+1. Symmetric Encryption: AES uses the same key for both encryption and decryption, making key management crucial.  Both parties must securely share and store the key.
+2 Block Cipher: AES processes data in fixed-size blocks of 128 bits. If the data exceeds this size, it is divided into multiple blocks.
+3. Key Sizes: AES supports three key lengths: 128, 192, and 256 bits. Longer keys offer higher security but may require more processing power.
+4. Structure: AES operates through a series of rounds, involving substitutions, permutations, and mixing of the input data. The number of rounds varies by key length:
+10 rounds for 128-bit keys
+12 rounds for 192-bit keys
+14 rounds for 256-bit keys
+5. Efficiency: AES is designed for speed and efficiency, making it suitable for both hardware and software implementations.</string>
+
+    <string name="ref1"><u>AES wiki</u></string>
+    <string name="ref2"><u>Data Encryption</u></string>
+    <string name="ref3"><u>Encryption wiki</u></string>
+    <string name="ref4"><u>Data Encryption guide</u></string>
+
+    <string name="creator1"><u>Joseph Tristan Subong</u></string>
+    <string name="creator2"><u>Vince Alwyn Sibay</u></string>
+    <string name="creator3"><u>Leonard Vir-neil Omadle</u></string>
+
+    <string-array name="encryptions_algs">
+        <item>AES (Advanced Encryption Standard)</item>
+        <item>RSA (Rivest Shamir Adleman)</item>
+        <item>SHA (Secure Hashing Algorithm)</item>
+        <item>a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a </item>
+        <item>Encryption 5</item>
+    </string-array>
+
+</resources>
