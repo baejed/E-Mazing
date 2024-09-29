@@ -101,13 +101,54 @@ public class EncryptActivity extends AppCompatActivity {
                             if (key.isEmpty()) {
                                 key = RSA.publicKeyToString(keyPair.getPublic());
                                 String decryptKey = RSA.privateKeyToString(keyPair.getPrivate());
-                                Session.decryptKey = decryptKey;
                                 txtKey.setText(key);
                                 keyInfo = "\n\nDECRYPT KEY:\n" + decryptKey;
                             }
 
                             output = RSA.encrypt(key, message);
                             output += keyInfo;
+                        } catch (Exception e) {
+                            output = e.getMessage();
+                        }
+
+                        txtOutput.setText(output);
+                        break;
+                    case 2:
+                        try {
+                            if (key.isEmpty()) {
+                                key = DES.generateDESKey();
+                                txtKey.setText(key);
+                            }
+
+                            output = DES.encrypt(key, message);
+                        } catch (Exception e) {
+                            output = e.getMessage();
+                        }
+
+                        txtOutput.setText(output);
+                        break;
+                    case 3:
+                        try {
+                            if (key.isEmpty()) {
+                                key = Blowfish.generateBlowfishKey();
+                                txtKey.setText(key);
+                            }
+
+                            output = Blowfish.encrypt(key, message);
+                        } catch (Exception e) {
+                            output = e.getMessage();
+                        }
+
+                        txtOutput.setText(output);
+                        break;
+                    case 4:
+                        try {
+                            if (key.isEmpty()) {
+                                key = Vigenere64.generateKey();
+                                txtKey.setText(key);
+                            }
+
+                            output = Vigenere64.encrypt(key, message);
                         } catch (Exception e) {
                             output = e.getMessage();
                         }

@@ -81,6 +81,11 @@ public class DecryptActivity extends AppCompatActivity {
                 String key = txtKey.getText().toString();
                 String message = txtMessage.getText().toString();
 
+                if (key.isEmpty()) {
+                    txtOutput.setText("Empty key");
+                    return;
+                }
+
                 switch ((int) spinnerDecrypt.getSelectedItemId()) {
                     case 0:
                         try {
@@ -90,9 +95,6 @@ public class DecryptActivity extends AppCompatActivity {
                         }
 
                         txtOutput.setText(output);
-                        Session.decryptMessage = txtMessage.getText().toString();
-                        Session.decryptKey = txtKey.getText().toString();
-
                         break;
                     case 1:
                         try {
@@ -103,6 +105,34 @@ public class DecryptActivity extends AppCompatActivity {
                         }
 
                         txtOutput.setText(output);
+                        break;
+                    case 2:
+                        try {
+                            output = DES.decrypt(key, message);
+                        } catch (Exception e) {
+                            output = e.getMessage();
+                        }
+
+                        txtOutput.setText(output);
+                        break;
+                    case 3:
+                        try {
+                            output = Blowfish.decrypt(key, message);
+                        } catch (Exception e) {
+                            output = e.getMessage();
+                        }
+
+                        txtOutput.setText(output);
+                        break;
+                    case 4:
+                        try {
+                            output = Vigenere64.decrypt(key, message);
+                        } catch (Exception e) {
+                            output = e.getMessage();
+                        }
+
+                        txtOutput.setText(output);
+                        break;
                 }
             }
         });
