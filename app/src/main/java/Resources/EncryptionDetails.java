@@ -96,8 +96,7 @@ public class EncryptionDetails {
         return "• Base64 Encoding: Vigenere64 combines Vigenere cipher techniques with Base64 encoding, providing an extra layer of obfuscation. The message and key are both encoded in Base64 before encryption and decoded after decryption.\n\n" +
                 "• Symmetric Encryption: Like the Vigenere cipher, Vigenere64 uses a key that is repeated (or cycled) over the length of the message. The same key is used for both encryption and decryption, making key management essential.\n\n" +
                 "• Variable Key Length: The key can be of any length, but during encryption, the key is cycled to match the length of the message. This allows flexibility in the key size.\n\n" +
-                "• Incremental Shift: The encryption process involves shifting characters of the Base64-encoded message by the combined index of the corresponding message character and key character, plus the position in the message, making the encryption more complex.\n\n" +
-                "• Non-standard Algorithm: Vigenere64 is an experimental hybrid encryption method and does not meet modern cryptographic standards. Its security relies on obfuscation rather than robust cryptographic principles, making it unsuitable for securing sensitive information.\n\n" +
-                "• Key Generation: A random Base64-encoded key can be generated using UUIDs, ensuring a unique key for each encryption process, though the security of the key generation mechanism is not as robust as standard cryptographic practices.";
+                "• Incremental Shift: The encryption process involves shifting characters of the Base64-encoded message by the combined index of the corresponding message character and key character, plus both the position and the length of the message, making the encryption more complex.\n\n" +
+                "• Non-standard Algorithm: Vigenere64 is an experimental hybrid encryption method and does not meet modern cryptographic standards. Its security relies on obfuscation rather than robust cryptographic principles, making it unsuitable for securing sensitive information.\n\n";
     }
 }
