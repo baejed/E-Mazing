@@ -37,7 +37,7 @@ public class DES {
     // To generate a random DES key (Optional if you want to generate a key)
     public static String generateDESKey() throws Exception {
         KeyGenerator keyGen = KeyGenerator.getInstance("DES");
-        keyGen.init(64); // DES uses a 56-bit key
+        keyGen.init(56); // DES uses a 56-bit key
         SecretKey secretKey = keyGen.generateKey();
         return Base64.getEncoder().encodeToString(secretKey.getEncoded());
     }
