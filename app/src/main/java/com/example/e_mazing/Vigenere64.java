@@ -17,7 +17,7 @@ public class Vigenere64 {
 
             int messageIndex = charset.indexOf(message.charAt(i));
             int keyIndex = charset.indexOf(key.charAt(i % key.length()));
-            int resultIndex = (messageIndex + keyIndex + i) % charset.length();
+            int resultIndex = (messageIndex + keyIndex + i + message.length()) % charset.length();
             result += charset.charAt(resultIndex);
         }
 
@@ -36,7 +36,13 @@ public class Vigenere64 {
 
             int messageIndex = charset.indexOf(message.charAt(i));
             int keyIndex = charset.indexOf(key.charAt(i % key.length()));
-            int resultIndex = (messageIndex - keyIndex - i + charset.length()) % charset.length();
+            int resultIndex = (messageIndex - keyIndex - i - message.length());
+
+            while (resultIndex < 0) {
+                resultIndex += charset.length();
+            }
+
+            resultIndex %= charset.length();
             result += charset.charAt(resultIndex);
         }
 
@@ -44,6 +50,14 @@ public class Vigenere64 {
     }
 
     public static String generateKey() throws Exception {
-        return Base64.getEncoder().encodeToString(UUID.randomUUID().toString().getBytes());
+        String result = "";
+        Random random = new Random();
+
+        for (int i = 0; i < 8; i++) {
+            int index = random.nextInt(charset.length());
+            result += charset.charAt(index);
+        }
+
+        return result;
     }
 }
