@@ -141,6 +141,20 @@ public class EncryptActivity extends AppCompatActivity {
 
                         txtOutput.setText(output);
                         break;
+                    case 4:
+                        try {
+                            if (key.isEmpty()) {
+                                key = Vigenere64.generateKey();
+                                txtKey.setText(key);
+                            }
+
+                            output = Vigenere64.encrypt(key, message);
+                        } catch (Exception e) {
+                            output = e.getMessage();
+                        }
+
+                        txtOutput.setText(output);
+                        break;
                 }
             }
         });

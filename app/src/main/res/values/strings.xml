@@ -36,7 +36,7 @@ Features:
         <item>RSA (Rivest Shamir Adleman)</item>
         <item>DES (Data Encryption Standard)</item>
         <item>Blowfish</item>
-        <item>Encryption 5</item>
+        <item>Vigenere64</item>
     </string-array>
 
 </resources>
