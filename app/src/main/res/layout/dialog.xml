@@ -76,7 +76,6 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/sample_features"
                     android:textSize="11sp"
                     android:fontFamily="@font/space_mono_bold"
                     android:id="@+id/txtFeatures"
