@@ -110,6 +110,15 @@ public class DecryptActivity extends AppCompatActivity {
 
                         txtOutput.setText(output);
                         break;
+                    case 3:
+                        try {
+                            output = Blowfish.decrypt(key, message);
+                        } catch (Exception e) {
+                            output = e.getMessage();
+                        }
+
+                        txtOutput.setText(output);
+                        break;
                 }
             }
         });

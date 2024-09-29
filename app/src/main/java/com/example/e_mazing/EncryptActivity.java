@@ -127,6 +127,20 @@ public class EncryptActivity extends AppCompatActivity {
 
                         txtOutput.setText(output);
                         break;
+                    case 3:
+                        try {
+                            if (key.isEmpty()) {
+                                key = Blowfish.generateBlowfishKey();
+                                txtKey.setText(key);
+                            }
+
+                            output = Blowfish.encrypt(key, message);
+                        } catch (Exception e) {
+                            output = e.getMessage();
+                        }
+
+                        txtOutput.setText(output);
+                        break;
                 }
             }
         });
