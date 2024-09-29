@@ -62,10 +62,10 @@ public class EncryptionListActivity extends AppCompatActivity {
 
         //gi set ang modals
         this.encryption1.setOnClickListener(Navigator.showDialog(EncryptionListActivity.this, EncryptionDetails.aesTitle(), EncryptionDetails.aesDescription(), EncryptionDetails.aesFeatures()));
-        this.encryption2.setOnClickListener(Navigator.showDialog(EncryptionListActivity.this, EncryptionDetails.aesTitle(), EncryptionDetails.aesDescription(), EncryptionDetails.aesFeatures()));
-        this.encryption3.setOnClickListener(Navigator.showDialog(EncryptionListActivity.this, EncryptionDetails.aesTitle(), EncryptionDetails.aesDescription(), EncryptionDetails.aesFeatures()));
-        this.encryption4.setOnClickListener(Navigator.showDialog(EncryptionListActivity.this, EncryptionDetails.aesTitle(), EncryptionDetails.aesDescription(), EncryptionDetails.aesFeatures()));
-        this.encryption5.setOnClickListener(Navigator.showDialog(EncryptionListActivity.this, EncryptionDetails.aesTitle(), EncryptionDetails.aesDescription(), EncryptionDetails.aesFeatures()));
+        this.encryption2.setOnClickListener(Navigator.showDialog(EncryptionListActivity.this, EncryptionDetails.rsaTitle(), EncryptionDetails.rsaDescription(), EncryptionDetails.rsaFeatures()));
+        this.encryption3.setOnClickListener(Navigator.showDialog(EncryptionListActivity.this, EncryptionDetails.desTitle(), EncryptionDetails.desDescription(), EncryptionDetails.desFeatures()));
+        this.encryption4.setOnClickListener(Navigator.showDialog(EncryptionListActivity.this, EncryptionDetails.blowfishTitle(), EncryptionDetails.blowfishDescription(), EncryptionDetails.blowfishFeatures()));
+        this.encryption5.setOnClickListener(Navigator.showDialog(EncryptionListActivity.this, EncryptionDetails.v64Title(), EncryptionDetails.v64Description(), EncryptionDetails.v64Features()));
 
         // gi set ang highlight tap effect
         this.encryption1.setOnTouchListener(Painter.tapHighlightEffect(EncryptionListActivity.this, encryption1, getDrawable(R.color.light_green)));

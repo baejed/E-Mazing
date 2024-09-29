@@ -1,26 +1,34 @@
 <resources>
     <string name="app_name">E-Mazing</string>
     <string name="title">E-Mazing Encryption</string>
-    <string name="encryption_desc">Encryption is the process of converting information or data into a code to prevent unauthorized access. It uses algorithms to transform readable data (plaintext) into an unreadable format (ciphertext). Only those with the correct decryption key can access the original information.</string>
+
+    <string name="encryption_desc">Encryption is the process of converting information or data into a code to prevent unauthorized access.
+        It uses algorithms to transform readable data (plaintext) into an unreadable format (ciphertext).
+        Only those with the correct decryption key can access the original information.</string>
+
     <string name="placeholder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam officia accusantium nisi magni est repellendus facilis distinctio quia dicta corrupti.</string>
     <string name="hash">eyJpdiI6IkYzYytHNVFielRQVUFSd1NOWTdlK1E9PSIsCiJ2IjoxLAoiaXRlciI6MTAwMCwKImtzIjoyNTYsCiJ0cyI6NjQsCiJtb2RlIjoiY2NtIiwKImFkYXRhIjoiIiwKImNpcGhlciI6ImFlcyIsCiJzYWx0IjoiWC9NMzdVN1Z3UGc9IiwKImN0IjoiRDJmT203b2diNzlDM2NFRCJ9</string>
 
-    <string name="aes_decription">The Advanced Encryption Standard (AES) is a symmetric encryption algorithm widely used across the globe to secure data. Established by the National Institute of Standards and Technology (NIST) in 2001, AES is a robust and efficient encryption standard that replaced the older Data Encryption Standard (DES).</string>
+    <string name="aes_decription">The Advanced Encryption Standard (AES) is a symmetric encryption algorithm widely used across the globe to secure data.
+        Established by the National Institute of Standards and Technology (NIST) in 2001, AES is a robust and efficient encryption standard that replaced the older Data Encryption Standard (DES).</string>
 
     <string name="congrats_message">Congratulations on completing your encryption journey! You\'ve unlocked the secrets of encryption.</string>
 
-    <string name="sample_features">The Advanced Encryption Standard (AES) is a symmetric encryption algorithm widely used across the globe to secure data. Established by the National Institute of Standards and Technology (NIST) in 2001, AES is a robust and efficient encryption standard that replaced the older Data Encryption Standard (DES).
+    <string name="rsa_description">RSA is a public-key encryption algorithm named after its inventors Rivest, Shamir, and Adleman.
+        Introduced in 1977, RSA is widely used for securing sensitive data, particularly in secure communications and digital signatures.
+        It is based on the mathematical difficulty of factoring large integers.</string>
 
-Features:
+    <string name="des_description">The Data Encryption Standard (DES) is a symmetric encryption algorithm that was widely used from the mid-1970s until the early 2000s.
+        It was developed by IBM and adopted as a federal standard by the United States in 1977.
+        Although it has been largely replaced by AES due to security concerns, DES played a foundational role in the development of modern encryption algorithms.</string>
 
-1. Symmetric Encryption: AES uses the same key for both encryption and decryption, making key management crucial.  Both parties must securely share and store the key.
-2 Block Cipher: AES processes data in fixed-size blocks of 128 bits. If the data exceeds this size, it is divided into multiple blocks.
-3. Key Sizes: AES supports three key lengths: 128, 192, and 256 bits. Longer keys offer higher security but may require more processing power.
-4. Structure: AES operates through a series of rounds, involving substitutions, permutations, and mixing of the input data. The number of rounds varies by key length:
-10 rounds for 128-bit keys
-12 rounds for 192-bit keys
-14 rounds for 256-bit keys
-5. Efficiency: AES is designed for speed and efficiency, making it suitable for both hardware and software implementations.</string>
+    <string name="blowfish_description">Blowfish is a symmetric-key block cipher designed by Bruce Schneier in 1993.
+        Known for its speed and effectiveness, Blowfish was widely adopted for encryption in software applications.
+        While not as common today due to the rise of AES, Blowfish remains notable for its flexibility and high performance.</string>
+
+    <string name="v64_description">Vigenere64 is our experimental encryption algorithm that combines the concept of Vigenere cipher to Base64 encoding.
+        It is not a standard or widely known encryption algorithm but rather a hybrid of existing concepts.
+        If you intend to use this for encryption in practical scenarios, be cautious, as it does not provide strong security by modern cryptographic standards.</string>
 
     <string name="ref1"><u>AES wiki</u></string>
     <string name="ref2"><u>Data Encryption</u></string>
