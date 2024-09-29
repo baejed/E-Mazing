@@ -1,5 +1,6 @@
 package com.example.e_mazing;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -80,9 +81,12 @@ public class DecryptActivity extends AppCompatActivity {
                 String output = "";
                 String key = txtKey.getText().toString();
                 String message = txtMessage.getText().toString();
+                txtOutput.setTextColor(Color.BLACK);
+                int errorColor = Color.parseColor("#AA0000");
 
                 if (key.isEmpty()) {
                     txtOutput.setText("Empty key");
+                    txtOutput.setTextColor(errorColor);
                     return;
                 }
 
@@ -92,6 +96,7 @@ public class DecryptActivity extends AppCompatActivity {
                             output = AES.decrypt(key, message);
                         } catch (Exception e) {
                             output = e.getMessage();
+                            txtOutput.setTextColor(errorColor);
                         }
 
                         txtOutput.setText(output);
@@ -102,6 +107,7 @@ public class DecryptActivity extends AppCompatActivity {
                             output = RSA.decrypt(key, message);
                         } catch (Exception e) {
                             output = e.getMessage();
+                            txtOutput.setTextColor(errorColor);
                         }
 
                         txtOutput.setText(output);
@@ -111,6 +117,7 @@ public class DecryptActivity extends AppCompatActivity {
                             output = DES.decrypt(key, message);
                         } catch (Exception e) {
                             output = e.getMessage();
+                            txtOutput.setTextColor(errorColor);
                         }
 
                         txtOutput.setText(output);
@@ -120,6 +127,7 @@ public class DecryptActivity extends AppCompatActivity {
                             output = Blowfish.decrypt(key, message);
                         } catch (Exception e) {
                             output = e.getMessage();
+                            txtOutput.setTextColor(errorColor);
                         }
 
                         txtOutput.setText(output);
@@ -129,6 +137,7 @@ public class DecryptActivity extends AppCompatActivity {
                             output = Vigenere64.decrypt(key, message);
                         } catch (Exception e) {
                             output = e.getMessage();
+                            txtOutput.setTextColor(errorColor);
                         }
 
                         txtOutput.setText(output);
