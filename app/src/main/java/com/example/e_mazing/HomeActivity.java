@@ -63,7 +63,7 @@ public class HomeActivity extends AppCompatActivity {
         this.encryption1.setOnClickListener(Navigator.showDialog(HomeActivity.this, EncryptionDetails.aesTitle(), EncryptionDetails.aesDescription(), EncryptionDetails.aesFeatures()));
 
         this.encryption2.setOnTouchListener(Painter.tapHighlightEffect(HomeActivity.this, encryption2, getDrawable(R.color.light_green)));
-        this.encryption2.setOnClickListener(Navigator.showDialog(HomeActivity.this, EncryptionDetails.aesTitle(), EncryptionDetails.aesDescription(), EncryptionDetails.aesFeatures()));
+        this.encryption2.setOnClickListener(Navigator.showDialog(HomeActivity.this, EncryptionDetails.rsaTitle(), EncryptionDetails.rsaDescription(), EncryptionDetails.rsaFeatures()));
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

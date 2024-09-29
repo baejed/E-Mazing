@@ -142,7 +142,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="2dp"
                                     android:background="@color/green"
-                                    android:id="@+id/btnStartEncryptingUnderline">
+                                    android:id="@+id/btnStartEncryptingUnderline"
+                                    android:orientation="horizontal">
 
                                 </LinearLayout>
                             </LinearLayout>
@@ -220,7 +221,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="AES (Advanced Encryption Standard)"
+                                android:text="RSA (Rivest Shamir Adleman)"
                                 android:textSize="16dp"
                                 android:fontFamily="@font/space_mono_bold"
                                 android:textColor="@color/black"
@@ -229,7 +230,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/aes_decription"
+                                android:text="@string/rsa_description"
                                 android:layout_marginTop="10dp"
                                 android:textSize="14dp"
                                 android:fontFamily="@font/space_mono_regular"

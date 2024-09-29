@@ -116,7 +116,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="AES (Advanced Encryption Standard)"
+                        android:text="RSA (Rivest Shamir Adleman)"
                         android:textSize="16dp"
                         android:fontFamily="@font/space_mono_bold"
                         android:textColor="@color/black"
@@ -125,7 +125,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/aes_decription"
+                        android:text="@string/rsa_description"
                         android:layout_marginTop="10dp"
                         android:textSize="14dp"
                         android:fontFamily="@font/space_mono_regular"
@@ -152,7 +152,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="AES (Advanced Encryption Standard)"
+                        android:text="DES (Data Encryption Standard)"
                         android:textSize="16dp"
                         android:fontFamily="@font/space_mono_bold"
                         android:textColor="@color/black"
@@ -161,7 +161,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/aes_decription"
+                        android:text="@string/des_description"
                         android:layout_marginTop="10dp"
                         android:textSize="14dp"
                         android:fontFamily="@font/space_mono_regular"
@@ -188,7 +188,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="AES (Advanced Encryption Standard)"
+                        android:text="Blowfish"
                         android:textSize="16dp"
                         android:fontFamily="@font/space_mono_bold"
                         android:textColor="@color/black"
@@ -197,7 +197,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/aes_decription"
+                        android:text="@string/blowfish_description"
                         android:layout_marginTop="10dp"
                         android:textSize="14dp"
                         android:fontFamily="@font/space_mono_regular"
@@ -209,6 +209,16 @@
                         />
 
                 </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Uncommon Types of Encryption"
+                    android:fontFamily="@font/space_mono_bold"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_marginVertical="20dp"/>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -223,7 +233,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="AES (Advanced Encryption Standard)"
+                        android:text="Vigenere64"
                         android:textSize="16dp"
                         android:fontFamily="@font/space_mono_bold"
                         android:textColor="@color/black"
@@ -232,7 +242,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/aes_decription"
+                        android:text="@string/v64_description"
                         android:layout_marginTop="10dp"
                         android:textSize="14dp"
                         android:fontFamily="@font/space_mono_regular"
