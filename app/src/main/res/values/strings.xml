@@ -34,7 +34,7 @@ Features:
     <string-array name="encryptions_algs">
         <item>AES (Advanced Encryption Standard)</item>
         <item>RSA (Rivest Shamir Adleman)</item>
-        <item>SHA (Secure Hashing Algorithm)</item>
+        <item>DES (Data Encryption Standard)</item>
         <item>a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a </item>
         <item>Encryption 5</item>
     </string-array>
