@@ -1,8 +1,11 @@
 package com.example.e_mazing;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -14,6 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.security.KeyPair;
 
 import Conroller.Control;
 import Conroller.Navigator;
@@ -72,13 +77,91 @@ public class DecryptActivity extends AppCompatActivity {
         this.btnDecode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String output = "enc: " + spinnerDecrypt.getSelectedItem() +
-                        "\nmsg: " + txtMessage.getText() +
-                        "\nkey: " + txtKey.getText();
-                Log.d("HAHAHAHAHAHA", output);
-                txtOutput.setText(output);
+                String output = "";
+                String key = txtKey.getText().toString();
+                String message = txtMessage.getText().toString();
+
+                switch ((int) spinnerDecrypt.getSelectedItemId()) {
+                    case 0:
+                        try {
+                            output = AES.decrypt(key, message);
+                        } catch (Exception e) {
+                            output = e.getMessage();
+                        }
+
+                        txtOutput.setText(output);
+                        Session.decryptMessage = txtMessage.getText().toString();
+                        Session.decryptKey = txtKey.getText().toString();
+
+                        break;
+                    case 1:
+                        try {
+                            KeyPair keyPair = RSA.generateRSAKeyPair();
+                            output = RSA.decrypt(key, message);
+                        } catch (Exception e) {
+                            output = e.getMessage();
+                        }
+
+                        txtOutput.setText(output);
+                }
             }
         });
+
+        // these additions below make it so that input data persists after navigation -ionvop
+        this.spinnerDecrypt.setSelection(Session.decryptMode);
+        this.txtMessage.setText(Session.decryptMessage);
+        this.txtKey.setText(Session.decryptKey);
+        this.txtOutput.setText(Session.decryptOutput);
+
+        this.spinnerDecrypt.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Session.decryptMode = (int) id;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
+
+        this.txtMessage.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Session.decryptMessage = s.toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
+
+        this.txtKey.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Session.decryptKey = s.toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
+
+        this.txtOutput.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Session.decryptOutput = s.toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
+        // -ionvop
 
         this.btnSpinner.setOnClickListener(Control.activateSpinner(spinnerDecrypt));
 

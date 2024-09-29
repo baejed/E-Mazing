@@ -163,7 +163,8 @@
                         android:fontFamily="@font/space_mono_regular"
                         android:textColor="@color/black"
                         android:id="@+id/txtOutput"
-                        android:minHeight="200dp"/>
+                        android:minHeight="200dp"
+                        android:textIsSelectable="true"/>
                 </LinearLayout>
 
             </LinearLayout>
