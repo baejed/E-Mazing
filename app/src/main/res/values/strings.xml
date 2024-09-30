@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">E-Mazing</string>
-    <string name="title">E-Mazing Encryption</string>
+    <string name="title">E-Mazing</string>
 
     <string name="encryption_desc">Encryption is the process of converting information or data into a code to prevent unauthorized access.
         It uses algorithms to transform readable data (plaintext) into an unreadable format (ciphertext).
