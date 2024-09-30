@@ -1,5 +1,7 @@
 package com.example.e_mazing;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -77,6 +79,8 @@ public class EncryptActivity extends AppCompatActivity {
                 String output = "";
                 String key = txtKey.getText().toString();
                 String message = txtMessage.getText().toString();
+                txtOutput.setTextColor(Color.BLACK);
+                int errorColor = Color.parseColor("#AA0000");
 
                 switch ((int) spinnerEncrypt.getSelectedItemId()) {
                     case 0:
@@ -89,6 +93,7 @@ public class EncryptActivity extends AppCompatActivity {
                             output = AES.encrypt(key, message);
                         } catch (Exception e) {
                             output = e.getMessage();
+                            txtOutput.setTextColor(errorColor);
                         }
 
                         txtOutput.setText(output);
@@ -109,6 +114,7 @@ public class EncryptActivity extends AppCompatActivity {
                             output += keyInfo;
                         } catch (Exception e) {
                             output = e.getMessage();
+                            txtOutput.setTextColor(errorColor);
                         }
 
                         txtOutput.setText(output);
@@ -123,6 +129,7 @@ public class EncryptActivity extends AppCompatActivity {
                             output = DES.encrypt(key, message);
                         } catch (Exception e) {
                             output = e.getMessage();
+                            txtOutput.setTextColor(errorColor);
                         }
 
                         txtOutput.setText(output);
@@ -137,6 +144,7 @@ public class EncryptActivity extends AppCompatActivity {
                             output = Blowfish.encrypt(key, message);
                         } catch (Exception e) {
                             output = e.getMessage();
+                            txtOutput.setTextColor(errorColor);
                         }
 
                         txtOutput.setText(output);
@@ -151,6 +159,7 @@ public class EncryptActivity extends AppCompatActivity {
                             output = Vigenere64.encrypt(key, message);
                         } catch (Exception e) {
                             output = e.getMessage();
+                            txtOutput.setTextColor(errorColor);
                         }
 
                         txtOutput.setText(output);
